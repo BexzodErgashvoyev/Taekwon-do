@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <title>Taekwon-Do ITF</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/0/0b/International_Taekwon-Do_Federation_logo.png">
+</head>
+<link rel="stylesheet" href="./style.css">
+
+  <meta name="description" content="Taekwon‑Do ITF haqida ma’lumot, galereya, dars jadvali va klubga yozilish. To‘liq responsiv va tezkor sayt." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial']
+          },
+          colors: {
+            brand: {
+              50: '#eef9ff',
+              100: '#d6f0ff',
+              200: '#b0e2ff',
+              300: '#7fd0ff',
+              400: '#46b8ff',
+              500: '#1e9eff',
+              600: '#0f7fdb',
+              700: '#0a67b6',
+              800: '#094f8d',
+              900: '#083f70'
+            }
+          },
+          boxShadow: {
+            'glow': '0 10px 30px rgba(30,158,255,0.35)'
+          },
+          backgroundImage: {
+            'grid': 'radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)',
+            'radial': 'radial-gradient(1200px 500px at 10% -10%, rgba(30,158,255,0.20), transparent 60%), radial-gradient(1200px 500px at 110% 10%, rgba(0,0,0,0.25), transparent 50%)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-radial"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-grid bg-[size:22px_22px]"></div>
+
+
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/55 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-lg bg-brand-500/20 ring-1 ring-brand-400/30 flex items-center justify-center shadow-glow">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#46b8ff" stroke-width="2"/>
+              <path d="M5 15h14M7 9h10" stroke="#46b8ff" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 12l2-5 2 5" stroke="#46b8ff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="text-lg font-semibold tracking-tight">Taekwon‑Do ITF</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#about" class="link-underline text-slate-200 hover:text-white">Haqida</a>
+          <a href="#principles" class="link-underline text-slate-200 hover:text-white">Tamoyillar</a>
+          <a href="#gallery" class="link-underline text-slate-200 hover:text-white">Galereya</a>
+          <a href="#schedule" class="link-underline text-slate-200 hover:text-white">Jadval</a>
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/10 transition">Bog‘lanish</a>
+        </nav>
+
+        <button id="menuBtn" aria-label="Menu" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 hover:bg-white/10 transition">
+          <svg id="menuIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden slide-down border-t border-white/10 bg-slate-950/60 backdrop-blur">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#about" class="py-2">Haqida</a>
+        <a href="#principles" class="py-2">Tamoyillar</a>
+        <a href="#gallery" class="py-2">Galereya</a>
+        <a href="#schedule" class="py-2">Jadval</a>
+        <a href="#contact" class="py-2">Bog‘lanish</a>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-20 lg:pt-20 lg:pb-28">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span> ITF an’analari, zamonaviy yondashuv
+          </div>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+            Kuch, tezlik va intizom. Taekwon‑Do ITF bilan o‘s.
+          </h1>
+          <p class="mt-4 text-slate-300/90 text-base sm:text-lg">
+            ITF uslubi bo‘yicha to‘liq dastur: fundamental texnika, tullar, sparring va o‘zini himoya qilish.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="btn-gradient inline-flex items-center justify-center rounded-lg bg-brand-600 px-5 py-3 font-semibold shadow-glow hover:bg-brand-500 transition">
+              Hozir yozilish
+            </a>
+            <a href="#gallery" class="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 px-5 py-3 hover:bg-white/10 transition">
+              Galereyani ko‘rish
+            </a>
+          </div>
+          <div class="mt-6 flex items-center gap-6 text-xs sm:text-sm text-slate-400">
+            <div class="flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              ITF standartlariga mos
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#60a5fa" stroke-width="2"/><path d="M12 7v6l4 2" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/></svg>
+              Haftada 3 mashg‘ulot
+            </div>
+          </div>
+        </div>
+
+        <div class="relative reveal">
+          <div class="absolute -top-10 -right-8 h-40 w-40 bg-brand-500/20 rounded-full blur-3xl float"></div>
+          <div class="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-2 shadow-2xl">
+            <div class="overflow-hidden rounded-xl zoom">
+              <img src="https://images.squarespace-cdn.com/content/v1/5de5132908114a27bbdd5250/1575885072686-SLMVKLJ59JT5OO0ZKO37/Taekwon-Do+Sparring.jpg?format=2500w" alt="Taekwon‑Do zarba va mashg‘ulot" class="w-full h-72 sm:h-[420px] object-cover" />
+            </div>
+            <div class="p-4 flex items-center justify-between">
+              <div class="text-sm text-slate-300">ITF texnika sessiyasi</div>
+              <div class="flex items-center gap-2 text-xs text-slate-400">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Faol
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="py-14 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1">
+          <h2 class="text-2xl sm:text-3xl font-bold reveal">Taekwon‑Do ITF haqida</h2>
+          <p class="mt-3 text-slate-300/90 reveal">General Choi Hong Hi asos solgan ITF — texnika aniqligi, me’yoriy tamoyillar va sinovli graduatsiya tizimiga tayanadi.</p>
+        </div>
+        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-5 reveal">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-brand-500/20 flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l3 6 6 .5-4.5 4 1.3 6.5L12 17l-5.8 3.9L7.5 13 3 9.5 9 9l3-6z" stroke="#46b8ff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="font-semibold">Tullar (Patterns)</h3>
+            </div>
+            <p class="mt-2 text-sm text-slate-300/90">Dan-Guplarga mos 24 ta tul — muvozanat, nafas va nazoratni rivojlantiradi.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-5 reveal">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5v14" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="font-semibold">Sparring va o‘yin</h3>
+            </div>
+            <p class="mt-2 text-sm text-slate-300/90">Yarim kontaktli musobaqa formati — tezlik, masofa va timing.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-5 reveal">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 12l3 3 5-6" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="font-semibold">O‘zini himoya qilish</h3>
+            </div>
+            <p class="mt-2 text-sm text-slate-300/90">Praktik, real vaziyatlarga mos texnikalar va senariylar.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-5 reveal">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-pink-500/20 flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 7c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5z" stroke="#ec4899" stroke-width="2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke="#ec4899" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="font-semibold">Kuch va moslashuvchanlik</h3>
+            </div>
+            <p class="mt-2 text-sm text-slate-300/90">Periodizatsiya, STRETCH va plyometrika bilan integratsiya.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="principles" class="py-14 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-6 sm:p-8 reveal">
+        <h2 class="text-2xl sm:text-3xl font-bold">ITF besh tamoyili</h2>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">Xushmuomalalik</div>
+            <p class="mt-1 text-sm text-slate-300/90">Odob-axloq, hurmat.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">Halollik</div>
+            <p class="mt-1 text-sm text-slate-300/90">To‘g‘rilik va vijdon.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">Matonat</div>
+            <p class="mt-1 text-sm text-slate-300/90">Qiyin vaziyatda sabot.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">O‘zini tiyish</div>
+            <p class="mt-1 text-sm text-slate-300/90">Nazorat va intizom.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">Vatanparvarlik</div>
+            <p class="mt-1 text-sm text-slate-300/90">Jamiyatga sadoqat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="gallery" class="py-14 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-bold reveal">Galereya</h2>
+        <div class="text-sm text-slate-400 reveal">Rasmlarni bosib kattalashtiring</div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1599050877754-1b5bffbcde8a?q=80&w=1600&auto=format&fit=crop" aria-label="Rasmni ochish">
+          <img src="https://itftkd.sport/wp-content/uploads/2020/06/Competition-ITF-2-394.jpg" alt="Taekwon‑Do sparring" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1612101365629-0b3616e9aac2?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://itftkd.sport/wp-content/uploads/2020/07/Competition-Sparring-men-2.jpg" alt="Taekwon‑Do zarba" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1571731956672-01b255192df8?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://taekwondoprofissional.com.br/wp-content/uploads/2025/07/tkd.jpg" alt="Dojo mashg‘ulot" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1549057446-9f5c6ac91a03?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://frankmurphysmasterclass.com/wp-content/uploads/2016/05/Taekwondo-Champions-Sparring.jpg" alt="Kata/Tul bajarilishi" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1629690150247-02f0a3a4c06b?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://www.gazeta.uz/media/img/2013/06/1OblRP13709205783467_b.jpg" alt="Sinov va yashil kamar" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1602530102753-3fb5c3584f16?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://podrobno.uz/upload/iblock/c6c/4.jpg" alt="Jamoa tayyorgarligi" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1571791807932-d46129e2eec6?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://yunsc.uz/assets/images/photo-08-900x700.jpg" alt="Yuqori zarba" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+        <button class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 lift zoom" data-photo="https://images.unsplash.com/photo-1552072092-7f9b8d63df03?q=80&w=1600&auto=format&fit=crop">
+          <img src="https://yunsc.uz/assets/images/photo-08-2-900x700.jpg" alt="Musobaqa lahzasi" class="h-40 sm:h-48 w-full object-cover" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="py-14 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 reveal">
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-6 sm:p-8">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <h2 class="text-2xl sm:text-3xl font-bold">Mashg‘ulot jadvali</h2>
+          <div class="flex items-center gap-3 text-sm">
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Boshlovchilar
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+              <span class="h-2 w-2 rounded-full bg-sky-400"></span> O‘rta daraja
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+              <span class="h-2 w-2 rounded-full bg-amber-400"></span> Ilg‘or
+            </span>
+          </div>
+        </div>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="flex items-center justify-between">
+              <div class="font-semibold">Seshanba  • 18:00</div>
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            </div>
+            <p class="mt-1 text-sm text-slate-300/90">Fundamental texnika, bazaviy turlar.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="flex items-center justify-between">
+              <div class="font-semibold">Payshanba • 18:00</div>
+              <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+            </div>
+            <p class="mt-1 text-sm text-slate-300/90">Tullar, kombinatsiyalar va oyoq ishlari.</p>
+          </div>
+          <div class="lift rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="flex items-center justify-between">
+              <div class="font-semibold">Shanba • 18:00</div>
+              <span class="h-2 w-2 rounded-full bg-amber-400"></span>
+            </div>
+            <p class="mt-1 text-sm text-slate-300/90">Sparring, taktik va konditsion mashqlar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="py-14 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-6 sm:p-8 reveal">
+          <h2 class="text-2xl sm:text-3xl font-bold">Klubga yoziling</h2>
+          <p class="mt-2 text-slate-300/90">1 ta bepul sinov darsi. Arizani yuboring — tez orada bog‘lanamiz.</p>
+          <form id="contactForm" class="mt-6 grid grid-cols-1 gap-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm text-slate-300">Ism</label>
+                <input required type="text" name="name" class="mt-1 w-full rounded-lg bg-slate-900/60 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="Ismingiz" />
+              </div>
+              <div>
+                <label class="text-sm text-slate-300">Telefon</label>
+                <input required type="tel" name="phone" class="mt-1 w-full rounded-lg bg-slate-900/60 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="+998 ----------" />
+              </div>
+            </div>
+            <div>
+              <label class="text-sm text-slate-300">Darajangiz</label>
+              <select name="level" class="mt-1 w-full rounded-lg bg-slate-900/60 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500">
+                <option>Boshlovchi</option>
+                <option>O‘rta</option>
+                <option>Ilg‘or</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-slate-300">Xabar</label>
+              <textarea name="message" rows="4" class="mt-1 w-full rounded-lg bg-slate-900/60 border border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" placeholder="Maqsadingiz yoki savolingiz..."></textarea>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <button type="submit" class="btn-gradient inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3 font-semibold shadow-glow hover:bg-brand-500 transition">
+                Yuborish
+              </button>
+              <div id="formStatus" class="text-sm text-slate-400"></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-6 sm:p-8 reveal">
+          <h3 class="text-xl sm:text-2xl font-bold">Manzil va aloqa</h3>
+          <div class="mt-4 space-y-3 text-slate-300/90">
+            <div class="flex items-center gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z" stroke="#46b8ff" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#46b8ff" stroke-width="2"/></svg>
+              Piskent tumani, 2-maktab
+            </div>
+            <div class="flex items-center gap-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 5l6 1 2 5-3 2a12 12 0 006 6l2-3 5 2-1 6C10 26 2 14 3 5z" stroke="#46b8ff" stroke-width="2" stroke-linecap="round"/></svg>
+              +998 88 539 79 80 (Telegram mavjud)
+            </div>
+          </div>
+          <div class="mt-6 overflow-hidden rounded-xl border border-white/10">
+            <img src="https://lh3.googleusercontent.com/proxy/IwExl40Dg3wLf4rLBXKOhvEhHELm5_u6WS9i5Cwp6HUK4lDRRKZkZkHZF2jPxGJGbXCUIR1Z8h5NeREV_jgk32HPON2rib5J5myzXYK4SBONISQ" alt="Zal interyeri" class="w-full h-60 object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-slate-400">© <span id="year"></span> Taekwon-Do ITF Club, Ergashvoyev Bexzod</div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#about" class="link-underline text-slate-300 hover:text-white">Haqida</a>
+          <a href="#gallery" class="link-underline text-slate-300 hover:text-white">Galereya</a>
+          <a href="#contact" class="link-underline text-slate-300 hover:text-white">Bog‘lanish</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/80 p-4">
+    <button id="lightboxClose" aria-label="Yopish" class="absolute top-4 right-4 h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="Kattalashtirilgan rasm" class="max-h-[85vh] max-w-[95vw] rounded-xl border border-white/10 shadow-2xl" />
+  </div>
+
+ 
+   <script src="index.js"></script>
+</body>
+</html>
